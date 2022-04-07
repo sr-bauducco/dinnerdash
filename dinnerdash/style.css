@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+
+/* colors and images */
+
+:root {
+    --nav-links-color: #fff;
+    --button-hover-color: #878584;
+    --backoffice-menu-bg: #343a40;
+    --table-head-bg: #e9ecef;
+    --nav-link-hover-color: #f79800;
+    --footer-color: #e3e3e3;
+    --dark-layer: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6));
+    --header-bg-image: url(img_bg_backoffice_usuario.jpg);
+    --edit-button-color: #ffa207;
+    --delete-button-color: #dc3545;
+    --pagination-active-bg: #007bff;
+}
+
+
+/* cleans some styles */
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    min-width: 590px;
+}
+
+
+/* header styles */
+
+header {
+    background-image: var(--dark-layer), var(--header-bg-image);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 45vh;
+    padding: 2% 5%;
+    color: var(--nav-links-color);
+}
+
+header a:hover {
+    color: var(--nav-link-hover-color);
+}
+
+.site_menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site_menu>nav,
+.backoffice_menu {
+    display: flex;
+    column-gap: 2rem;
+}
+
+.backoffice_menu {
+    background-color: var(--backoffice-menu-bg);
+    color: var(--nav-links-color);
+    font-size: 0.7rem;
+    padding: 1rem 5%;
+}
+
+
+/* main styles */
+
+main {
+    min-height: 40vh;
+    width: 80%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    border-spacing: 0;
+}
+
+thead {
+    background-color: var(--table-head-bg);
+}
+
+tbody {
+    vertical-align: top;
+}
+
+th,
+td {
+    text-align: left;
+    width: 20rem;
+}
+
+th {
+    padding: 1rem;
+}
+
+td {
+    padding: 0.6rem 1rem;
+}
+
+.action_buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    column-gap: 1rem;
+    padding: 0.6rem 0;
+    width: 100%;
+}
+
+.text_button {
+    font-weight: bold;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.edit_button {
+    color: var(--edit-button-color);
+}
+
+.delete_button {
+    color: var(--delete-button-color);
+}
+
+.edit_button:hover,
+.delete_button:hover {
+    color: var(--button-hover-color);
+}
+
+
+/* pagination */
+
+.pagination {
+    display: flex;
+    margin: 1rem auto;
+}
+
+.pagination button {
+    color: black;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border: 1px solid #ddd;
+}
+
+.pagination button.active {
+    background-color: var(--pagination-active-bg);
+    color: white;
+    border: 1px solid var(--pagination-active-bg);
+}
+
+.pagination button:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.pagination button:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.pagination button:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+/* footer styles */
+
+footer {
+    background-color: var(--footer-color);
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+}
